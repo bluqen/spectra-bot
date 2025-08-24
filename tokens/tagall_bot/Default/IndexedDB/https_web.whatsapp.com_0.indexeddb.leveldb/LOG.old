@@ -1,0 +1,16 @@
+2025/08/24-14:44:10.554 1154 Reusing MANIFEST C:\Users\DELL\Documents\code\Spectra\tokens\tagall_bot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/24-14:44:10.556 1154 Recovering log #118
+2025/08/24-14:44:10.665 1154 Reusing old log C:\Users\DELL\Documents\code\Spectra\tokens\tagall_bot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000118.log 
+2025/08/24-14:44:12.967 dc4 Level-0 table #124: started
+2025/08/24-14:44:13.044 dc4 Level-0 table #124: 650870 bytes OK
+2025/08/24-14:44:13.047 dc4 Delete type=0 #118
+2025/08/24-14:44:13.051 dc4 Manual compaction at level-0 from '\x00%\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00&\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/08/24-14:44:17.683 1154 Compacting 1@1 + 2@2 files
+2025/08/24-14:44:17.812 1154 Generated table #125@1: 68565 keys, 2242181 bytes
+2025/08/24-14:44:17.898 1154 Generated table #126@1: 34311 keys, 2207406 bytes
+2025/08/24-14:44:17.905 1154 Generated table #127@1: 1908 keys, 40082 bytes
+2025/08/24-14:44:17.906 1154 Compacted 1@1 + 2@2 files => 4489669 bytes
+2025/08/24-14:44:17.907 1154 compacted to: files[ 0 0 3 0 0 0 0 ]
+2025/08/24-14:44:17.907 1154 Delete type=2 #120
+2025/08/24-14:44:17.907 1154 Delete type=2 #121
+2025/08/24-14:44:17.907 1154 Delete type=2 #124
