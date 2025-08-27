@@ -1,4 +1,3 @@
 flask
 WPP_Whatsapp
 requests
-playwright
