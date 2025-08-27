@@ -1,3 +1,4 @@
 WPP_Whatsapp
 requests
 flask
+pyppeteer
