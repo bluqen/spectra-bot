@@ -1,10 +1,11 @@
 # Base Python image
 FROM python:3.10-slim
 
-# Install Chromium and dependencies
+# Install dependencies
 RUN apt-get update && apt-get install -y \
-    chromium-browser \
-    chromium-driver \
+    wget \
+    gnupg \
+    unzip \
     fonts-liberation \
     libasound2 \
     libatk-bridge2.0-0 \
@@ -19,12 +20,15 @@ RUN apt-get update && apt-get install -y \
     libxdamage1 \
     libxrandr2 \
     xdg-utils \
-    wget \
-    unzip \
     && rm -rf /var/lib/apt/lists/*
 
-# Set environment variables for Chromium
-ENV CHROME_BIN=/usr/bin/chromium-browser
+# Install Google Chrome Stable
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+    && apt-get install -y ./google-chrome-stable_current_amd64.deb \
+    && rm google-chrome-stable_current_amd64.deb
+
+# Set environment variables so puppeteer/WPP_Whatsapp can find Chrome
+ENV CHROME_BIN=/usr/bin/google-chrome
 ENV CHROMIUM_FLAGS="--no-sandbox --disable-dev-shm-usage"
 
 # Install Python dependencies
