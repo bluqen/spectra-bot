@@ -1,3 +1,4 @@
+flask
 WPP_Whatsapp
 requests
-flask
+playwright

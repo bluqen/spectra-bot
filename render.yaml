@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wpp-bot
+    env: python
+    plan: free
+    buildCommand: |
+      apt-get update
+      apt-get install -y chromium chromium-driver
+      pip install -r requirements.txt
+    startCommand: python index.py
+    envVars:
+      - key: PUPPETEER_EXECUTABLE_PATH
+        value: /usr/bin/chromium
