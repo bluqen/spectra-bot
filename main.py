@@ -1,13 +1,6 @@
 from flask import Flask
 from WPP_Whatsapp import Create
 
-import asyncio
-from playwright.__main__ import main as playwright_main
-
-# Ensure chromium is installed (downloads to /.cache/ms-playwright)
-asyncio.get_event_loop().run_until_complete(asyncio.create_subprocess_exec("playwright", "install", "chromium"))
-
-
 app = Flask(__name__)
 
 # Create WhatsApp client
@@ -22,7 +15,8 @@ session = Create(
         "--no-zygote",
         "--single-process"
     ],
-    executablePath="/opt/render/project/.cache/ms-playwright/chromium/chrome-linux/chrome"
+    headless=True  # 👈 IMPORTANT: Force headless mode
+    # No need for executablePath if Playwright is installed correctly
 )
 
 client = session.start()
