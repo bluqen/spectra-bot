@@ -3,9 +3,9 @@ FROM python:3.10-slim
 
 # Install Chromium and dependencies
 RUN apt-get update && apt-get install -y \
-    chromium chromium-driver \
+    chromium-browser \
+    chromium-driver \
     fonts-liberation \
-    libappindicator3-1 \
     libasound2 \
     libatk-bridge2.0-0 \
     libatk1.0-0 \
@@ -23,8 +23,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
-# Set environment so WPP_Whatsapp knows where Chrome is
-ENV CHROME_BIN=/usr/bin/chromium
+# Set environment variables for Chromium
+ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROMIUM_FLAGS="--no-sandbox --disable-dev-shm-usage"
 
 # Install Python dependencies
